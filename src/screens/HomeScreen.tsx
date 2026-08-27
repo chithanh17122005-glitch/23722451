@@ -44,8 +44,6 @@ import {
     CategoryId,
     Product,
     fetchProducts,
-    getCategoryId,
-    getCategoryLabel,
 } from '../services/productApi';
 
 
@@ -118,7 +116,7 @@ const ProductCard = memo(
     ({ item, onPress }: ProductCardProps) => {
         const { colors } = useTheme();
 
-        const price = item.priceFormatted || `${item.price?.toLocaleString('vi-VN')} đ`;
+        const price = `${item.price.toLocaleString('vi-VN')} đ`;
 
         return (
             <Pressable
@@ -159,7 +157,7 @@ const ProductCard = memo(
                             variant="caption"
                             color={COLORS.textLight}
                         >
-                            {getCategoryLabel(item.category)}
+                            {item.categoryLabel}
                         </Typography>
                     </View>
                 </View>
@@ -282,8 +280,7 @@ const HomeScreen = () => {
             const matchName =
                 product.title.toLowerCase().includes(keyword);
 
-            const productCategory =
-                getCategoryId(product.category);
+            const productCategory = product.category;
 
             const matchCategory =
                 selectedCategory === 'all' ||
@@ -679,7 +676,7 @@ const HomeScreen = () => {
                                     color={COLORS.primary}
                                     style={styles.modalPrice}
                                 >
-                                    {selectedProduct.priceFormatted || `${selectedProduct.price?.toLocaleString('vi-VN')} đ`}
+                                    {selectedProduct.price.toLocaleString('vi-VN')} đ
                                 </Typography>
 
 
@@ -687,10 +684,7 @@ const HomeScreen = () => {
                                     variant="body"
                                     color={colors.textLight}
                                 >
-                                    Loại:{' '}
-                                    {getCategoryLabel(
-                                        selectedProduct.category,
-                                    )}
+                                    Loại: {selectedProduct.categoryLabel}
                                 </Typography>
 
 

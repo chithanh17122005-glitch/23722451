@@ -1,5 +1,7 @@
 import { PRICE_MULTIPLIER } from '@constants/student';
 
+export type CategoryId = 'all' | 'food' | 'drink' | 'study';
+
 export interface Product {
     id: number | string;
     title: string;
