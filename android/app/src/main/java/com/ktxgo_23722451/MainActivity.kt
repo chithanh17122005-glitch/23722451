@@ -1,4 +1,4 @@
-package com.campusmart_23722451
+package com.ktxgo_23722451
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
@@ -11,7 +11,7 @@ class MainActivity : ReactActivity() {
    * Returns the name of the main component registered from JavaScript. This is used to schedule
    * rendering of the component.
    */
-  override fun getMainComponentName(): String = "CampusMart_23722451"
+  override fun getMainComponentName(): String = "KTXGo_23722451"
 
   /**
    * Returns the instance of the [ReactActivityDelegate]. We use [DefaultReactActivityDelegate]

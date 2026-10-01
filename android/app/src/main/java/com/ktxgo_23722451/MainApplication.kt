@@ -1,4 +1,4 @@
-package com.campusmart_23722451
+package com.ktxgo_23722451
 
 import android.app.Application
 import com.facebook.react.PackageList
