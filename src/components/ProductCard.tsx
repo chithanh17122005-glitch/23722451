@@ -1,10 +1,11 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
-import * as Haptics from 'expo-haptics';
+import { View, Text, Image, TouchableOpacity, StyleSheet, Vibration } from 'react-native';
 import { Product } from '@services/productApi';
 import { PRICE_MULTIPLIER, STUDENT } from '@constants/student';
 import { COLORS } from '@constants/theme';
 import { useCartStore } from '@stores/cartStore';
+
+const Haptics = { selectionAsync: () => Vibration.vibrate(25) };
 
 interface ProductCardProps {
   item: Product;

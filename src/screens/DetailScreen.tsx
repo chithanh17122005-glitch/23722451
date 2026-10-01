@@ -1,12 +1,13 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet, SafeAreaView, Alert, ScrollView } from 'react-native';
-import * as Haptics from 'expo-haptics';
+import { View, Text, Image, TouchableOpacity, StyleSheet, SafeAreaView, Alert, ScrollView, Vibration } from 'react-native';
 import { useQuery } from '@tanstack/react-query';
 import { Watermark } from '@components/Watermark';
 import { getProducts } from '@services/productApi';
 import { PRICE_MULTIPLIER, STUDENT } from '@constants/student';
 import { COLORS } from '@constants/theme';
 import { useCartStore } from '@stores/cartStore';
+
+const Haptics = { selectionAsync: () => Vibration.vibrate(25) };
 
 export const DetailScreen = ({ route }: any) => {
   const { id } = route.params || {};

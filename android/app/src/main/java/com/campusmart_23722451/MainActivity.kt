@@ -1,4 +1,4 @@
-package com.ktxgo_23722451
+package com.campusmart_23722451
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

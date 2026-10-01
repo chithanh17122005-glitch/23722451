@@ -36,7 +36,7 @@ export const HomeScreen = () => {
 
         <TextInput
           style={styles.searchInput}
-          placeholder={`Tìm món (debounce) — ${STUDENT.mssv}`}
+          placeholder={`Tìm giày, dép (debounce) — ${STUDENT.mssv}`}
           value={search}
           onChangeText={setSearch}
         />
@@ -46,7 +46,7 @@ export const HomeScreen = () => {
       {isLoading ? (
         <View style={styles.center}>
           <ActivityIndicator size="large" color={COLORS.primary} />
-          <Text style={styles.loadingText}>Đang tải món...</Text>
+          <Text style={styles.loadingText}>Đang tải giày dép...</Text>
         </View>
       ) : isError ? (
         <View style={styles.center}>
