@@ -24,6 +24,12 @@
       ],
       "@hooks/*": [
         "./src/hooks/*"
+      ],
+      "@stores/*": [
+        "./src/stores/*"
+      ],
+      "@navigation/*": [
+        "./src/navigation/*"
       ]
     }
   },
